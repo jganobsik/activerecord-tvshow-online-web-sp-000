@@ -9,7 +9,7 @@ def self.most_popular_show
 end
 
 def self.lowest_rating
-  Show.minimum(:rating)
+  Show.where("rating = ?", Show.lowest_rating).first
 end
 
 def self.least_popular_show
