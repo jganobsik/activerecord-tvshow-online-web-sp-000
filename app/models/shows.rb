@@ -13,7 +13,7 @@ def self.lowest_rating
 end
 
 def self.least_popular_show
- ("rating = ?", Show.lowest_rating).first
+  Show.where("rating = ?", Show.lowest_rating).first
 end
 
 def self.ratings_sum
